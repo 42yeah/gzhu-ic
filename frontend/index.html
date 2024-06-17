@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="viewport">
+      <div class="container">
+        <h1>GZHU IC 观测气球系统</h1>
+        <div class="panes">
+          <div class="first">
+            <div class="detail-box-container">
+              <div class="detail-box">
+                <h3>订场情况及预览</h3>
+                <div class="indicators">
+                  <div class="indicator-light" id="ind-0"></div>
+                  <div class="indicator-light" id="ind-1"></div>
+                  <div class="indicator-light" id="ind-2"></div>
+                  <div class="indicator-light" id="ind-3"></div>
+                  <div class="indicator-light" id="ind-4"></div>
+                  <div class="indicator-light" id="ind-5"></div>
+                  <div class="indicator-light" id="ind-6"></div>
+                  <div class="indicator-light" id="ind-7"></div>
+                </div>
+                <div class="book-message">
+                  无可用内容。
+                </div>
+              </div>
+            </div>
+            
+            <div class="detail-box-container">
+              <div class="detail-box">
+                <h3 class="title-pad">用户细节</h3>
+                <div class="users">
+                </div>
+                <div class="user-detail">
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-box-container">
+              <div class="detail-box">
+                <h3 class="title-pad">操作日志</h3>
+                <div class="log-box">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="second">
+            <h3>口令</h3>
+            <div class="button-group">
+              <div class="button-container"><input id="password"></div>
+              <div class="button-container"><div class="button">记住</div></div>
+            </div>
+            <h3>前往</h3>
+            <div class="button-group-no-pad">
+              <div class="button-container"><div class="button" onclick="currentDay = 0; selectBook(currentDay * 2 + currentSlot);">今天</div></div>
+              <div class="button-container"><div class="button" onclick="currentDay = 1; selectBook(currentDay * 2 + currentSlot);">明天</div></div>
+              <div class="button-container"><div class="button" onclick="currentDay = 2; selectBook(currentDay * 2 + currentSlot);">后天</div></div>
+              <div class="button-container"><div class="button" onclick="currentDay = 3; selectBook(currentDay * 2 + currentSlot);">大后天</div></div>
+            </div>
+            <div class="button-group">
+              <div class="button-container"><div class="button" onclick="currentSlot = 0; selectBook(currentDay * 2 + currentSlot);">下午</div></div>
+              <div class="button-container"><div class="button" onclick="currentSlot = 1; selectBook(currentDay * 2 + currentSlot);">晚上</div></div>
+            </div>
+            <h3>操作</h3>
+            <div class="button-group">
+              <div class="button-container"><div class="button" onclick="refresh()">刷新</div></div>
+              <div class="button-container"><div class="button" onclick="preview()">预览最优</div></div>
+              <div class="button-container"><div class="button" onclick="book()">现在预订</div></div>
+              <div class="button-container"><div class="button">自动</div></div>
+              <div class="button-container"><div class="button">手动</div></div>
+              <div class="button-container"><div class="button" onclick="markDone(true)">标记为完成</div></div>
+              <div class="button-container"><div class="button" onclick="markDone(false)">标记为未完成</div></div>
+              <div class="button-container"><div class="button" onclick="cleanLog()">清除日志</div></div>
+            </div>
+            <h3>用户</h3>
+            <div class="button-group-no-pad">
+              <div class="button-container"><input id="ic-username" placeholder="账户/时长"></div>
+              <div class="button-container"><input id="ic-password" type="password" placeholder="密码"></div>
+            </div>
+            <div class="button-group">
+              <div class="button-container"><div class="button" onclick="currentUser--; selectUser();">向上选取</div></div>
+              <div class="button-container"><div class="button" onclick="currentUser++; selectUser();">向下选取</div></div>
+              <div class="button-container"><div class="button" onclick="addUser()">添加</div></div>
+              <div class="button-container"><div class="button" onclick="deleteUser()">删除</div></div>
+              <div class="button-container"><div class="button">设置为主用户</div></div>
+              <div class="button-container"><div class="button" onclick="skipper(false)">主动预定</div></div>
+              <div class="button-container"><div class="button" onclick="skipper(true)">不主动预定</div></div>
+              <div class="button-container"><div class="button" onclick="testUser()">测试登陆</div></div>
+              <div class="button-container"><div class="button" onclick="setQuota()">设置时长</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

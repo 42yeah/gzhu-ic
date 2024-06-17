@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Arial", sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+.container {
+    padding: 2em;
+}
+
+.detail-box {
+    max-width: 300px;
+    min-height: 100px;
+    border: 1px solid #aaa;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-box-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.panes {
+    display: grid;
+    grid-template-columns: 330px auto;
+}
+
+.second {
+    padding-left: 10px;
+}
+
+.button-group {
+    display: flex;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.button-group-no-pad {
+    display: flex;
+    padding-bottom: 0;
+    flex-wrap: wrap;
+}
+
+.button-container {
+    padding-left: 0;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.button {
+    border: 1px solid #aaa;
+    background: #aaaaaa33;
+    font-weight: bolder;
+    padding: 2px 10px;
+    box-shadow: 2px 2px 0 0 #aaaaaa77;
+    cursor: default;
+    user-select: none;
+}
+
+.button:active {
+    background: #aaaaaa77;
+    box-shadow: unset;
+    transform: translate(2px, 2px);
+}
+
+input {
+    border: 1px solid #aaa;
+    padding: 5px;
+    font-size: 1em;
+    height: 18px;
+    outline: 0;
+}
+
+.indicators {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 15px 15px 15px 15px;
+    column-gap: 4px;
+    row-gap: 1px;
+    padding-top: 5px;
+}
+
+.indicator-light {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(170, 170, 170);
+    border: 1px solid rgb(87, 87, 87);
+}
+
+.unbooked {
+    background-color: rgb(170, 170, 170);
+    border: 1px solid rgb(87, 87, 87);
+}
+
+.booked {
+    background-color: rgb(54, 180, 4);
+    border: 1px solid rgb(29, 102, 1);
+}
+
+.failed {
+    background-color: rgb(231, 106, 3);
+    border: 1px solid rgb(102, 46, 1);
+}
+
+.selected {
+    filter: brightness(50%);
+}
+
+.book-message {
+    padding-top: 10px;
+}
+
+.log-box {
+    border: 1px solid #ccc;
+    padding: 5px;
+    flex: 1;
+    max-height: 5em;
+    overflow-y: auto;
+}
+
+.title-pad {
+    padding-bottom: 5px;
+}
+
+.users {
+    border: 1px solid #ccc;
+    flex: 1;
+    max-height: 5em;
+    overflow-y: auto;
+}
+
+.user-detail {
+    padding-top: 0.5em;
+}
+
+.user-entry {
+    padding: 0 5px;
+    background: white;
+}
+
+.selected-user {
+    background: #007ef5;
+    color: white;
+}

@@ -1,3 +1,4 @@
 node_modules
 sentinel.sqlite3 
 debug.js
+aux/**
